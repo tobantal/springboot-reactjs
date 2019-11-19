@@ -1,0 +1,24 @@
+{
+  "name": "ch05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src/main/jsx -d src/main/resources/static/js"
+  },
+  "keywords": [
+    "react.js"
+  ],
+  "author": "Azat Mardan",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-preset-react": "6.24.1"
+  }
+}
