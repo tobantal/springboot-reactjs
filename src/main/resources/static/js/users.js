@@ -21,6 +21,29 @@ class Users extends React.Component {
         "table",
         { className: "table-striped table-condensed table table-bordered table-hover" },
         React.createElement(
+          "thead",
+          null,
+          React.createElement(
+            "tr",
+            null,
+            React.createElement(
+              "td",
+              null,
+              "ID"
+            ),
+            React.createElement(
+              "td",
+              null,
+              "UUID"
+            ),
+            React.createElement(
+              "td",
+              null,
+              "NAME"
+            )
+          )
+        ),
+        React.createElement(
           "tbody",
           null,
           this.state.users.map(user => React.createElement(
