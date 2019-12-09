@@ -20,6 +20,7 @@
   		<sonar.organization>tobolkin</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   		<sonar.login>ef31ea0d7a3ebcc201ef4e2551121317196e4f6e</sonar.login>
+		<sonar.sources>src/main/java,src/main/jsx</sonar.sources>
 	</properties>
 	
 	<dependencies>
