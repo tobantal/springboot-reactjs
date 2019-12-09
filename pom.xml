@@ -22,9 +22,9 @@
   		<sonar.login>ef31ea0d7a3ebcc201ef4e2551121317196e4f6e</sonar.login>
 		<sonar.sources>src/main/java,src/main/jsx</sonar.sources>
 	</properties>
-	
+
 	<dependencies>
-		<!--	
+		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -51,10 +51,25 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+        <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+        <!--
+        <dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.7.0.1746</version>
+        </dependency>
+        -->
+
 	</dependencies>
 
 	<build>
 		<plugins>
+         <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.6.0.1398</version>
+      </plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -115,6 +130,7 @@
 							<goal>report</goal>
 						</goals>
 					</execution>
+                </executions>
 			</plugin>
 		</plugins>
 	</build>
