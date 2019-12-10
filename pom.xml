@@ -21,21 +21,14 @@
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   		<sonar.login>ef31ea0d7a3ebcc201ef4e2551121317196e4f6e</sonar.login>
 		<sonar.sources>src/main/java,src/main/jsx</sonar.sources>
-        <sonar.javascript.lcov.reportPath>report/lcov.dat</sonar.javascript.lcov.reportPath>
+        <!--<sonar.javascript.lcov.reportPath>report/lcov.dat</sonar.javascript.lcov.reportPath>-->
 	</properties>
 
 	<dependencies>
-		<!--
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -53,12 +46,14 @@
 			</exclusions>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.sonarsource.javascript/javascript-checks-testkit -->
+		<!--
 		<dependency>
 		    <groupId>org.sonarsource.javascript</groupId>
 		    <artifactId>javascript-checks-testkit</artifactId>
 		    <version>6.1.0.11503</version>
 		    <scope>test</scope>
 		</dependency>
+		-->
 	</dependencies>
 
 	<build>
