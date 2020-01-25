@@ -31,7 +31,6 @@ public class UserController {
 }
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 class User {
 	private int id;
