@@ -1,22 +1,21 @@
 package com.example.reactjsserver.controller;
 
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.util.ArrayList;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
 
 	private List<User> users = new ArrayList<>();
-
-	{
+	
+	@PostConstruct
+	public void init() {
 		users.add(new User(0, UUID.randomUUID().toString(), "Ivan"));
 		users.add(new User(1, UUID.randomUUID().toString(), "Masha"));
 		users.add(new User(2, UUID.randomUUID().toString(), "Oleg"));
@@ -30,10 +29,31 @@ public class UserController {
 
 }
 
-@Data
-@AllArgsConstructor
 class User {
+
 	private int id;
 	private String uuid;
 	private String name;
+	
+	public User(int id, String uuid, String name) {
+		super();
+		this.id = id;
+		this.uuid = uuid;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getUuid() {
+		return uuid;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	
+	
 }
